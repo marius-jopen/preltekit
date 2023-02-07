@@ -3,8 +3,8 @@
 	import { namespace } from '$lib/prismic/functionality/setup'
 	import { vh, glossaryAll } from '$lib/prismic/functionality/stores'
 
-	import HeaderDesktop from "$lib/prismic/modules/header-desktop/header-desktop.svelte"
-	import HeaderMobile from "$lib/prismic/modules/header-mobile/header-mobile.svelte"
+	import HeaderDesktop from "$lib/prismic/modules/header/header-desktop.svelte"
+	import HeaderMobile from "$lib/prismic/modules/header/header-mobile.svelte"
 	import Footer from "$lib/prismic/modules/footer/footer.svelte"
 
 	export let data

@@ -1,9 +1,9 @@
 <script>
-  import Categories from "$lib/prismic/modules/categories/categories.svelte"
-  import Text from "$lib/prismic/atoms/text.svelte"
-  import ItemsProject from '$lib/prismic/modules/items-project/items-project.svelte'
+  import Categories from "$lib/prismic/modules/index/categories.svelte"
+  import ItemsProject from '$lib/prismic/modules/index/index-items.svelte'
 
 	export let data
+	export let type
 
 	// START CATEGORIES FILTER -> REACTIVE
 	let { category,
@@ -24,5 +24,5 @@
 	// END CATEGORIES FILTER -> REACTIVE
 </script>
 
-<Categories type='projects' {category} {categories} />
+<Categories {type} {category} {categories} />
 <ItemsProject items={filtered} />
