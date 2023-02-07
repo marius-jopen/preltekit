@@ -1,5 +1,5 @@
 <script>
-  import Slider from "$lib/prismic/modules/slider/gallery-slider.svelte"
+  import Slider from "$lib/prismic/modules/slider/slider.svelte"
 
 	export let slice
 
@@ -10,6 +10,6 @@
 	}
 </script>
 
-<div class="pt-4 pb-8 px-4">
+<div class="pt-4 pb-8">
 	<Slider input={slider} />
 </div>

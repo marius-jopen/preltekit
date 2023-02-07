@@ -31,8 +31,8 @@
 
 	//  Function which get the current caption
 	function getCaption(key) {
-		if (isFilled.richText(input[key].image_caption_gallery)) {
-			currentCaption = asText(input[key].image_caption_gallery)
+		if (isFilled.richText(input[key].image_caption_slider)) {
+			currentCaption = asText(input[key].image_caption_slider)
 		} else {
 			currentCaption = ''
 		}
@@ -60,7 +60,7 @@
 	}}>
 		{#each input as item}
 			<SplideSlide>
-				<Image src={item.image_gallery} classes='h-full object-cover' classesOuter='h-full' />
+				<Image src={item.image_slider} classes='h-full object-cover' classesOuter='h-full' />
 			</SplideSlide>
 		{/each}
 	</Splide>
@@ -79,7 +79,7 @@
 		</div>
 	{/if}
 
-	<div class="px-6 flex w-full justify-between bg-background border-lines border-b py-2">
+	<div class="flex w-full justify-between bg-background py-2">
 		<div>
 			{currentCaption}
 		</div>

@@ -14,8 +14,8 @@
 		text: Text,
 		image: Image,
 		video: Video,
-		embed: Embed,
-		slider: Slider
+		slider: Slider,
+		embed: Embed
 	}
 
   const missingSlice = (key) => !Object.keys(mappings).includes(key)
