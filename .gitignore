@@ -1,0 +1,14 @@
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+.env
+
+# Local Netlify folder
+.netlify
+
+# Lock files
+# package-lock.json
+pnpm-lock.yaml
+yarn.lock
