@@ -1,14 +1,17 @@
 <script>
+	import "../app.postcss"
 	import { namespace } from '$lib/prismic/functionality/setup'
 	import { vh, glossaryAll } from '$lib/prismic/functionality/stores'
 
-	// import Layout from "$lib/prismic/layout/layout.svelte"
-	// import Layout1 from "$lib/prismic/layout/layout-1.svelte"
-	import Layout2 from "$lib/prismic/layout/layout-2.svelte"
+	import HeaderDesktop from "$lib/prismic/modules/header-desktop/header-desktop.svelte"
+	import HeaderMobile from "$lib/prismic/modules/header-mobile/header-mobile.svelte"
+	import Footer from "$lib/prismic/modules/footer/footer.svelte"
 
 	export let data
 
+	const { setup } = data
 	const { glossary } = data
+
 	let innerHeight = ''
 
 	$: vh.set(innerHeight)
@@ -21,6 +24,11 @@
 
 <svelte:window bind:innerHeight />
 
-<Layout2 {data}>
+<HeaderDesktop {setup} />
+<HeaderMobile {setup} />
+
+<div class="wrapper min-h-screen p1">
 	<slot />
-</Layout2>
+</div>
+
+<Footer {setup} />

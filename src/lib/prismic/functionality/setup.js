@@ -7,41 +7,17 @@ export const routes = [
     path: '/',
   },
 	{
+    type: 'page',
+    path: '/:uid',
+  },
+	{
     type: 'projects',
     path: '/projects',
   },
 	{
-    type: 'products',
-    path: '/shop',
-  },
-	{
-    type: 'blog_posts',
-    path: '/blog',
-  },
-	{
-    type: 'glossary_items',
-    path: '/glossary',
-  },
-	{
-    type: 'page',
-    path: '/:uid',
-  },
-  {
-    type: 'project',
-    path: '/projects/:uid',
-  },
-	{
-    type: 'blog_post',
-    path: '/blog/:uid',
-  },
-	{
-    type: 'glossary_item',
-    path: '/glossary/:uid',
-  },
-	{
-    type: 'product',
-    path: '/products/:uid',
-  },
+		type: 'project',
+		path: '/projects/:uid',
+	}
 ]
 
 export function linkResolver (doc) {
@@ -53,18 +29,6 @@ export function linkResolver (doc) {
         return '/projects'
       case ('project'):
         return `/projects/${doc.uid}`
-			case ('blog_posts'):
-				return '/blog'
-			case ('blog_post'):
-				return `/blog/${doc.uid}`
-			case ('glossary_items'):
-				return '/glossary'
-			case ('glossary_item'):
-				return `/glossary/${doc.uid}`
-			case ('products'):
-				return '/shop'
-			case ('product'):
-				return `/shop/${doc.uid}`
 			case ('page'):
 				return `/${doc.uid}`
       case ('home'):

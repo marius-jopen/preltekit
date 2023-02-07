@@ -18,9 +18,5 @@
 
 	<div class="flex gap-3">
 		<Navigation document={setup.data.navigation_header} />
-
-		<div>
-			Cart
-		</div>
 	</div>
 </header>

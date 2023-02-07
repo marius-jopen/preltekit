@@ -24,6 +24,5 @@
 	// END CATEGORIES FILTER -> REACTIVE
 </script>
 
-<Text classes="h4 text-center pt-16 pb-8" plain field={document.data.title} />
 <Categories type='projects' {category} {categories} />
 <ItemsProject items={filtered} />

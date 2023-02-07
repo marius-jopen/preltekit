@@ -1,17 +1,18 @@
 <script>
 	import Seo from "$lib/prismic/functionality/seo.svelte"
-  import PageSingle from "$lib/prismic/pages/page-single/page-single.svelte"
-	import PageSingle1 from "$lib/prismic/pages/page-single/page-single-1.svelte";
+  import Text from "$lib/prismic/atoms/text.svelte"
+	import Slices from "$lib/prismic/functionality/slices.svelte"
 
 	export let data
 
-	$: data
-
 	const { document, setup } = data
+
+	$: data
 </script>
 
 {#key data}
 	<Seo {document} {setup} />
-	<!-- <PageSingle {data} /> -->
-	<PageSingle1 {data} />
+	aaaaaef
+	<Text classes="h4 text-center pt-16 pb-8" plain field={document.data.title} />
+	<Slices slices={document.data.body} />
 {/key}
