@@ -5,18 +5,22 @@
 
 	export let setup
 
-	let height = '0'
+	let height = 0
 
 	$: headerHeight.set(height)
 </script>
 
 
-<header class="justify-between px-2 py-2 hidden sm:flex">
-	<a href="/">
-		<Text plain field={setup.data.title} />
-	</a>
+<header bind:clientHeight={height} class="hidden sm:block fixed top-0 left-0 z-50 w-full">
+	<div class="flex justify-between px-4 py-2 bg-background border-b border-text">
+		<a href="/">
+			<Text plain field={setup.data.title} />
+		</a>
 
-	<div class="flex gap-3">
-		<Navigation document={setup.data.navigation_header} />
+		<div class="flex gap-3">
+			<Navigation document={setup.data.navigation_header} />
+		</div>
 	</div>
 </header>
+
+<div class="hidden sm:block" style="height: {height}px" />

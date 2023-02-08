@@ -12,7 +12,7 @@
 	}
 </script>
 
-<div class="pt-4 pb-8">
+<div class="pt-4 pb-8 w-1/2 mx-auto">
 	<Image {src} />
 	<Text field={text} />
 </div>

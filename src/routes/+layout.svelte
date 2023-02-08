@@ -27,7 +27,7 @@
 <HeaderDesktop {setup} />
 <HeaderMobile {setup} />
 
-<div class="wrapper min-h-screen p1">
+<div class="min-h-screen">
 	<slot />
 </div>
 
