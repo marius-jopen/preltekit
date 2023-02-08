@@ -12,7 +12,9 @@
 	}
 </script>
 
-<div class="pt-4 pb-8 w-1/2 mx-auto">
-	<Image {src} />
-	<Text field={text} />
+<div class="border-t border-text">
+	<div class="px-4 pt-8 pb-8 sm:w-1/2 mx-auto">
+		<Image {src} classesOuter="mb-2"/>
+		<Text field={text} />
+	</div>
 </div>

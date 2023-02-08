@@ -5,12 +5,12 @@
 	import Image from "$lib/prismic/atoms/image.svelte"
 
 	export let input
+	export let sliderRatio = 1
 
 	let splideSlider
 	let slideIndex = 1
 	let totalSlides = input.length
 	let currentCaption = ''
-	let sliderRatio = 1
 
 	getCaption(0)
 

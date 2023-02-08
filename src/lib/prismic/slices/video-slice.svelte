@@ -24,7 +24,9 @@
 	}
 </script>
 
-<div class="pt-4 pb-8">
-	<Video {src240p} {src360p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="" muted loop autoplay />
-	<Text field={text} />
+<div class="border-t border-text">
+	<div class="px-4 pt-8 pb-8 sm:w-1/2 mx-auto">
+		<Video {src240p} {src360p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="mb-2" muted loop autoplay />
+		<Text field={text} />
+	</div>
 </div>

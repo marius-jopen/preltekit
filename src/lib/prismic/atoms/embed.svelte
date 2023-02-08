@@ -1,9 +1,10 @@
 <script>
 	export let embedCode
 	export let classes
+	export let responsive = false
 </script>
 
-<div class="embed-container {classes}">
+<div class="{responsive ? 'embed-container' : ''} {classes}">
 	{@html embedCode}
 </div>
 

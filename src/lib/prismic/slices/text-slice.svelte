@@ -11,6 +11,8 @@
 	}
 </script>
 
-<div class="pt-4 pb-8">
-	<Text field={text} classes="{centered ? 'text-center' : ''}" />
+<div class="border-t border-text">
+	<div class="px-4 pt-6 pb-8 sm:w-1/2 mx-auto">
+		<Text field={text} classes="{centered ? 'text-center' : ''}" />
+	</div>
 </div>

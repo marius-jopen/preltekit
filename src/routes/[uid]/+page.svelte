@@ -13,5 +13,6 @@
 {#key data}
 	<Seo {document} {setup} />
 	<Text classes="h4 text-center pt-16 pb-8" plain field={document.data.title} />
+	<Text classes="px-4 text-center pb-12 sm:w-1/2 mx-auto" field={document.data.description} />
 	<Slices slices={document.data.body} />
 {/key}

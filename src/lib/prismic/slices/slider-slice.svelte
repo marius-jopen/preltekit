@@ -10,6 +10,8 @@
 	}
 </script>
 
-<div class="pt-4 pb-8">
-	<Slider input={slider} />
+<div class="border-t border-text">
+	<div class="px-4 mx-auto pt-8 pb-8 sm:w-1/2">
+		<Slider sliderRatio={0.5} input={slider} />
+	</div>
 </div>
