@@ -6,5 +6,5 @@
 </script>
 
 <div role="button" on:mousedown={back}>
-	Back
+	<slot />
 </div>

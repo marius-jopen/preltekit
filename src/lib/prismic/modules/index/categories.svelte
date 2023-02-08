@@ -9,7 +9,7 @@
 </script>
 
 <div>
-	<div class="flex gap-2 pb-8 justify-center">
+	<div class="px-4 text-center flex gap-2 flex-col sm:flex-row pb-8 justify-center">
 		<a
 			href="/{type}"
 			data-sveltekit-prefetch

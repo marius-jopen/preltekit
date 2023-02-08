@@ -10,7 +10,7 @@
 
   <div class="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-24 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-      <div class="mt-24 sm:mt-32 lg:mt-16">
+      <div class="mt-8 sm:mt-32 lg:mt-16">
         <a href="#" class="inline-flex space-x-6">
           <span class="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">
 						What's new
