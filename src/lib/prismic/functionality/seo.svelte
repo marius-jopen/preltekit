@@ -48,6 +48,7 @@
 	<meta name=”twitter:description” content={description}>
 	<meta name=”twitter:image” content={imageUrl}>
 
+	<meta property="og:type" content="website">
 	<meta property="og:site_name" content={title} />
 	<meta property="og:locale" content={language} />
 	<meta property="og:url" content={url} />
