@@ -1,7 +1,7 @@
 <script>
-	import Seo from "$lib/prismic/functionality/seo.svelte"
-	import Text from "$lib/prismic/atoms/text.svelte"
-	import Image from "$lib/prismic/atoms/image.svelte"
+	import Seo from "$lib/functionality/seo.svelte"
+	import Text from "$lib/atoms/text.svelte"
+	import Image from "$lib/atoms/image.svelte"
 
   export let data
 

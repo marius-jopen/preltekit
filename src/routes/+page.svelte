@@ -1,10 +1,7 @@
 <script>
-	import Seo from "$lib/prismic/functionality/seo.svelte"
-	import Hero from "$lib/custom-component/hero.svelte"
-	import FeatureGrid from "$lib/custom-component/feature-grid.svelte"
-	import Newsletter from "$lib/custom-component/newsletter.svelte"
-	import Cta from "$lib/custom-component/cta.svelte"
-	import Faq from "$lib/custom-component/faq.svelte"
+	import Seo from "$lib/functionality/seo.svelte"
+  import Text from "$lib/atoms/text.svelte"
+	import Slices from "$lib/slices/slices.svelte"
 
 	export let data
 
@@ -15,9 +12,7 @@
 
 {#key data}
 	<Seo {setup} {document} />
-	<Hero />
-	<FeatureGrid />
-	<Faq />
-	<Cta />
-	<Newsletter />
+	<Text classes="h4 text-center pt-16 pb-8" plain field={document.data.title} />
+	<Text classes="px-4 text-center pb-12 sm:w-1/2 mx-auto" field={document.data.description} />
+	<Slices slices={document.data.body} />
 {/key}

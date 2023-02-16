@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit'
-import createClient from '$lib/prismic/functionality/client'
+import createClient from '$lib/functionality/client'
 
 export async function load({ params, fetch, request }) {
   const api = createClient({ fetch, request })
