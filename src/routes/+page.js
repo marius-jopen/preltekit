@@ -1,17 +1,16 @@
 import { error } from '@sveltejs/kit'
-import createClient from "$lib/prismic/functionality/client"
+import createClient from '$lib/prismic/functionality/client'
 
-export async function load ({ parent, fetch, request }) { // used to be `stuff`
-  const api = await createClient({ fetch, request })
-  const data = await parent()
-  const document = await api.getSingle('home'); // Home information
+export async function load({ params, fetch, request }) {
+  const api = createClient({ fetch, request })
+  const { uid } = params
 
-  if (document) {
-    return {
-      ...data,
-      document
-    }
+  try {
+    const document = await api.getByUID('page', "home")
+
+    return { document, uid }
+  } catch (e) {
+    // Show user the page not found error
+    throw error(404, e.message)
   }
-
-  error(404, 'Not found')
 }
