@@ -11,6 +11,7 @@
 <div>
 	<div class="px-4 text-center flex gap-2 flex-col sm:flex-row pb-8 justify-center">
 		<a
+			data-sveltekit-noscroll
 			href="/{type}"
 			data-sveltekit-prefetch
 			class="{itemClasses} {!category ? activeClass : ''}"
@@ -20,6 +21,7 @@
 
 		{#each categories as c}
 			<a
+				data-sveltekit-noscroll
 				data-sveltekit-prefetch
 				class="{itemClasses} {kebabCase(c.toLowerCase()) === category ? activeClass : ''}"
 				href="?category={kebabCase(c.toLowerCase())}"
