@@ -23,4 +23,4 @@
 	</div>
 </header>
 
-<div class="hidden sm:block" style="height: {height}px" />
+<div class="hidden sm:block" style="height: {height - 1}px" />
