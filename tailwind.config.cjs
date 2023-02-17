@@ -11,7 +11,11 @@ module.exports = {
       },
 			colors: {
 				'background': 'rgb(242 240 246)',
-				'text': 'rgb(55 55 55)'
+				'text': 'rgb(55 55 55)',
+				'text-dark': 'rgb(77 77 77)',
+				'text-medium': 'rgb(120 120 120)',
+				'text-light': 'rgb(180 180 180)',
+				'highlight-1': 'rgb(59 130 246)',
 			}
 		}
   },
