@@ -12,9 +12,12 @@
 	}
 </script>
 
+
 <div class="border-t border-text">
-	<div class="px-4 pt-8 pb-8 mx-auto sm:w-1/2">
-		<Embed {embedCode} classes="mb-2" />
-		<Text field={caption} />
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 sm:py-12">
+		<div class="mx-auto max-w-3xl">
+			<Embed {embedCode} classes="mb-2" />
+			<Text field={caption} />
+		</div>
 	</div>
 </div>

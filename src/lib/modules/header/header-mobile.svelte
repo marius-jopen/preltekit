@@ -6,8 +6,8 @@
 
 	export let setup
 
+	let height = 0
 	let open = false
-	let height = 'h-16 text-lg'
 
 	function close() {
 		open = false
@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/collapse.css" />
 </svelte:head>
 
-<div class="{height} border-b border-text sm:hidden flex top-0 fixed w-screen z-50 px-2 bg-background justify-between cursor-pointer pt-2">
+<div bind:clientHeight={height} class="h-16 border-b border-text sm:hidden flex top-0 fixed w-screen z-50 px-2 bg-background justify-between cursor-pointer pt-2">
 	<a data-sveltekit-prefetch on:click="{close}" class="pt-2 pl-2" href="/">
 		<Text plain field={setup.data.title} />
 	</a>
@@ -44,6 +44,6 @@
 	</div>
 {/if}
 
-<div class="{height} block sm:hidden bg-background w-full">
+<div class="block sm:hidden bg-background w-full" style="height: {height}px;">
 	&nbsp;
 </div>
