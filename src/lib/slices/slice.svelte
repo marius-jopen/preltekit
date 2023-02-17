@@ -8,9 +8,10 @@
 	import Image from "$lib/slices/basic/image-slice.svelte"
 	import Embed from "$lib/slices/basic/embed-slice.svelte"
 	import Slider from "$lib/slices/basic/slider-slice.svelte"
-  import HeaderCenteredEyebrow from "$lib/slices/custom/header-centered-eyebrow.svelte"
 
 	// Custom
+  import HeaderCenteredEyebrow from "$lib/slices/custom/header-centered-eyebrow.svelte"
+	import TeamWithImageAndShortParagraph from "$lib/slices/custom/team-with-image-and-short-paragraph.svelte"
 
 	export let slice
 
@@ -23,7 +24,9 @@
 		embed: Embed,
 
 		// Custom
-		header_centered_eyebrow: HeaderCenteredEyebrow
+		header_centered_eyebrow: HeaderCenteredEyebrow,
+		team_with_image_and_short_paragraph: TeamWithImageAndShortParagraph
+
 	}
 
   const missingSlice = (key) => !Object.keys(mappings).includes(key)
