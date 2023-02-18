@@ -14,7 +14,7 @@
 </script>
 
 <div bind:offsetWidth={width} class="{classesOuter} relative " >
-	<img src="{src.url}?&w=50&blur=50" alt="{src.alt}" style="{styles}; height: {height}px" width={width} class="{classes} w-full">
+	<img src="{src.url}?&w=50&blur=50" alt="{src.alt}" style="{styles}; height: {height}px" width={width} class="{classes} w-full {loaded ? 'opacity-0' : ''}">
 
 	<div bind:clientHeight={height} class="overflow-hidden w-full absolute z-10 top-0 left-0 transition-opacity duration-500 opacity-0 {loaded ? 'opacity-100' : ''}">
 		<img
