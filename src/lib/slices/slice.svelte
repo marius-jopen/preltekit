@@ -10,10 +10,6 @@
 	import Slider from "$lib/slices/basic/slider-slice.svelte"
 
 	// Custom
-  import HeaderCenteredEyebrow from "$lib/slices/custom/header-centered-eyebrow.svelte"
-	import TeamWithImageAndShortParagraph from "$lib/slices/custom/team-with-image-and-short-paragraph.svelte"
-	import LogoCloudSimpleWithHeading from "$lib/slices/custom/logo-cloud-simple-with-heading.svelte"
-	import CtaSimpleCentered from "$lib/slices/custom/cta_simple_centered.svelte"
 
 	export let slice
 
@@ -26,10 +22,6 @@
 		embed: Embed,
 
 		// Custom
-		header_centered_eyebrow: HeaderCenteredEyebrow,
-		team_with_image_and_short_paragraph: TeamWithImageAndShortParagraph,
-		logo_cloud_simple_with_heading: LogoCloudSimpleWithHeading,
-		cta_simple_centered: CtaSimpleCentered
 
 	}
 
