@@ -20,11 +20,11 @@
 		<img
 		on:load="{imageLoaded}"
 		srcset="
-			{src.url}?&w={width}&fm=webp&lossless=true&dpr=1 1x,
-			{src.url}?&w={width}&fm=webp&lossless=true&dpr=2 2x,
-			{src.url}?&w={width}&fm=webp&lossless=true&dpr=3 3x
+			{src.url}?&w={width}&fm=avif&lossless=true&dpr=1 1x,
+			{src.url}?&w={width}&fm=avif&lossless=true&dpr=2 2x,
+			{src.url}?&w={width}&fm=avif&lossless=true&dpr=3 3x
 		"
-		src="{src.url}?&w={width}&fm=webp&lossless=true"
+		src="{src.url}?&w={width}&fm=avif&lossless=true"
 		alt="{src.alt}"
 		class="{classes} w-full"
 		width={width}
