@@ -8,7 +8,7 @@
 
 <div class="sm:w-1/2 lg:w-1/3 px-4 pb-8">
 	<Link document={item}>
-		<Image src={item.data.thumbnail} classesOuter="mb-1" classes="hover:scale-[1.01] transition-transform h-[40vw] sm:h-[20vw] lg:h-[15vw] object-cover" />
+		<Image src={item.data.thumbnail} classesOuter="mb-1" classes="hover:scale-[1.01] transition-transform object-cover aspect-[3/2]" />
 		<Text classes="text-center" plain field={item.data.title} />
 	</Link>
 </div>
