@@ -28,6 +28,7 @@
     "svelte-preprocess": "^4.10.7",
     "svelte-scrollto": "^0.2.0",
     "sveltekit-autoimport": "^1.6.9",
+    "svgson": "^5.2.1",
     "tailwindcss": "^3.2.1"
   },
   "type": "module",

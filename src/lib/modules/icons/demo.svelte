@@ -1,6 +1,6 @@
 <script>
   import Icon from "./icon.svelte"
-  import { library } from "./library"
+  import { page } from "$app/stores"
 
   let name = 'sun'
   let string = `<Icon {name} />`
@@ -20,7 +20,7 @@
 
   <div class="mb-12">
     <p>
-      I can also use <select bind:value={name} class="inline">{#each Object.keys($library) as key}
+      I can also use <select bind:value={name} class="inline">{#each Object.keys($page.data.iconLibrary) as key}
         <option value="{key}">
           {key}
         </option>
@@ -53,7 +53,7 @@
   </h3>
 
   <div class="flex gap-4 flex-wrap mb-4">
-    {#each Object.keys($library) as name}
+    {#each Object.keys($page.data.iconLibrary) as name}
       <div class="w-32 h-32 flex items-center justify-center flex-col gap-2">
         <div class="w-8 h-8">
           <Icon {name} />

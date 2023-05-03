@@ -3,7 +3,6 @@
 	import { namespace } from '$lib/functionality/setup'
 	import HeaderDesktopFixed from "$lib/modules/header/header-desktop-fixed.svelte"
 	import HeaderMobile from "$lib/modules/header/header-mobile.svelte"
-  import Library from "$lib/modules/icons/library.svelte"
 	import Footer from "$lib/modules/footer/footer.svelte"
 
 	export let data
@@ -17,8 +16,6 @@
 
 <HeaderDesktopFixed {setup} />
 <HeaderMobile {setup} />
-
-<Library />
 
 <div class="min-h-screen">
 	<slot />
