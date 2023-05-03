@@ -1,5 +1,7 @@
 <script>
-  import { libReady, library, strings } from "./library"
+  // import { libReady, library, strings } from "./library"
+  import { page } from "$app/stores"
+  import { stringify } from "svgson"
 
   export let name = ""
   export let state = "active"
@@ -33,9 +35,9 @@
 
   $: computedState = state
 
-  $: if ($libReady) {
-    if ($library[name]) {
-      svg = $library[name]
+  $: if ($page.data.iconLibrary) {
+    if ($page.data.iconLibrary[name]) {
+      svg = stringify($page.data.iconLibrary[name])
     } else {
       svg = ''
     }
@@ -44,7 +46,7 @@
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 
-{#if $libReady && svg !== ''}
+{#if svg !== ''}
   <div
     on:click
     on:keydown
@@ -53,7 +55,6 @@
     {role}
     tabindex="{role === 'button' ? 0 : -1}"
     aria-pressed="false"
-    title={$strings[name]}
     class:isInline={inline}
     class:inline-block={inline}
     class:flex={!inline}
