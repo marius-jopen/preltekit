@@ -26,7 +26,7 @@
 	}
 </script>
 
-<div bind:offsetWidth={width} class="border-t border-text">
+<div bind:offsetWidth={width} class="border-t border-text/20">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 sm:py-12">
 		<div class="mx-auto max-w-3xl">
 			<Video {src240p} {src360p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="mb-2" control muted loop autoplay />

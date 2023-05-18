@@ -24,7 +24,7 @@
 
 {#if href}
   <a
-    {href}
+    href={href == '/home' ? '/' : href}
     class="cursor-pointer {classes} {active ? activeClass : ''}"
     data-sveltekit-prefetch={prefetch}
     data-sveltekit-reload={reload}

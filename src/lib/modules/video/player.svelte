@@ -9,7 +9,7 @@
 		export let loop = false
 		export let controls = false
 		export let time
-		export let duration
+		export let duration = ""
 		export let video
 
     onMount(() => {

@@ -6,6 +6,10 @@ export const routes = [
     type: 'page',
     path: '/:uid',
   },
+  {
+    type: 'single',
+    path: '/single',
+  },
 	{
     type: 'projects',
     path: '/projects',
@@ -21,6 +25,8 @@ export function linkResolver (doc) {
     return doc.url
   } else {
     switch (doc.type) {
+      case ('single'):
+        return '/single'
       case ('projects'):
         return '/projects'
       case ('project'):

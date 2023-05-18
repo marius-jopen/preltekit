@@ -1,7 +1,6 @@
 <script>
 	import Seo from "$lib/functionality/seo.svelte"
-	import Text from "$lib/atoms/text.svelte"
-	import Slices from "$lib/slices/slices.svelte"
+  import Text from "$lib/atoms/text.svelte"
 
 	export let data
 
@@ -11,7 +10,6 @@
 </script>
 
 {#key data}
-	<Seo {setup} {document} />
+	<Seo {document} {setup} />
 	<Text classes="h4 text-center pt-16 pb-16" plain field={data.document.data.title} />
-	<Slices slices={data.document.data.body} />
 {/key}

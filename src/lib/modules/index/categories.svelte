@@ -4,8 +4,8 @@
 	export let categories
   export let category
 	export let type
-	export let itemClasses = 'border border-text hover:text-background hover:bg-text px-6 py-0.5'
-  export let activeClass = 'bg-text text-background'
+	export let itemClasses = 'rounded-xl bg-text/10 px-6 py-0.5 hover:bg-text/20 transition-colors duration-200'
+  export let activeClass = 'bg-text/50 hover:bg-text/50'
 </script>
 
 <div>

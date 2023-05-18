@@ -25,6 +25,14 @@
               "label" : "Link",
               "select" : null
             }
+          },
+          "level" : {
+            "type" : "Select",
+            "config" : {
+              "options" : [ "default", "parent", "child" ],
+              "default_value" : "default",
+              "label" : "Level"
+            }
           }
         },
         "label" : "Navigation Header"
