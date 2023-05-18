@@ -1,6 +1,8 @@
 import { makeCases } from '$lib/functionality/strings'
 import createClient from "$lib/functionality/client"
 
+export const prerender = true;
+
 export async function load({
   url,
   parent,
