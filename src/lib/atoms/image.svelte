@@ -22,11 +22,11 @@
 		<img
 		on:load="{imageLoaded}"
 		srcset="
-			{src.url}?&w={width * scale}&auto=compress,enhance&dpr=1 1x,
-			{src.url}?&w={width * scale}&auto=compress,enhance&dpr=2 2x,
-			{src.url}?&w={width * scale}&auto=compress,enhance&dpr=3 3x
+			{src.url}?&w={width * scale}&auto=compress,format,enhance&dpr=1 1x,
+			{src.url}?&w={width * scale}&auto=compress,format,enhance&dpr=2 2x,
+			{src.url}?&w={width * scale}&auto=compress,format,enhance&dpr=3 3x
 		"
-		src="{src.url}?&w={width * scale}&auto=compress,enhance"
+		src="{src.url}?&w={width * scale}&auto=compress,format,enhance"
 		alt="{src.alt}"
 		class="{classesImage} w-full"
 		>
