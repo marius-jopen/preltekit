@@ -1,8 +1,6 @@
 import { error } from '@sveltejs/kit'
 import createClient from '$lib/functionality/client'
 
-export const prerender = true;
-
 export async function load({ params, fetch, request }) {
   const api = createClient({ fetch, request })
   const { uid } = params
