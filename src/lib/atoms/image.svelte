@@ -1,34 +1,64 @@
 <script>
-  export let src
-	export let classesImage = ""
-	export let classesContainer = "w-full"
-	export let styles = ""
-	export let transitionTime = 0
-	export let scale = 1
+	import IntersectionObserver from "svelte-intersection-observer"
+	import { fade } from 'svelte/transition'
 
-	let loaded = false
+	export let src
+	export let transitionTime = 300
+	export let classContainer = ""
+	export let classImage = ""
+
+	let element
+  let intersecting = false
 	let width
-	let height = 300
+	let imgx
 
-	function imageLoaded() {
-		loaded = true
-	}
+	// Generates the image url with the width of the container
+	$: imgx = src.url + "&w=" + width
 </script>
 
-<div bind:offsetWidth={width} class="{classesContainer} relative" >
-	<img src="{src.url}?&w=50&blur=50" alt="{src.alt}" style="{styles}; width: {width}px" class="{classesImage} w-full {loaded ? 'opacity-0' : ''}">
+<!-- Container of the image, css can be changed -->
+<div class="{classContainer}">
 
-	<div bind:clientHeight={height} style="transition-duration: {transitionTime}ms" class="overflow-hidden w-full absolute z-10 top-0 left-0 transition-opacity opacity-0 {loaded ? 'opacity-100' : ''}">
-		<img
-		on:load="{imageLoaded}"
-		srcset="
-			{src.url}?&w={width * scale}&auto=compress,format,enhance&dpr=1 1x,
-			{src.url}?&w={width * scale}&auto=compress,format,enhance&dpr=2 2x,
-			{src.url}?&w={width * scale}&auto=compress,format,enhance&dpr=3 3x
-		"
-		src="{src.url}?&w={width * scale}&auto=compress,format,enhance"
-		alt="{src.alt}"
-		class="{classesImage} w-full"
+	<!-- Container which is relative, that the position absolute is working -->
+	<div class="relative">
+		<!-- Intersection observer to check if the container is in the viewport, also measures the width of the container -->
+		<IntersectionObserver once {element} bind:intersecting>
+			<div bind:offsetWidth={width} bind:this={element} class="w-full" />
+		</IntersectionObserver>
+	
+		<!-- Blurry image -->
+		<img 
+		alt="{src.alt}" 
+		src="{src.url}?fm=blurhash&w-10" 
+		class="{classImage}"
+		style="
+			transition: opacity 0s;
+			transition-delay: {transitionTime * 2}ms;
+			width: 100%;
+			opacity: {width ? '0' : '1'};
+		" 
 		>
+	
+		<!-- Final image, is visible when the size of the container is known and when the contaienr is in view -->
+		{#if width && intersecting}
+			<img
+			transition:fade={{duration: transitionTime}}
+			alt="{src.alt}"
+			src="{imgx}"
+			srcset="
+				{imgx}&dpr=1 1x,
+				{imgx}&dpr=2 2x,
+				{imgx}&dpr=3 3x
+			"
+			class="{classImage}"
+			style="
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				position: absolute;
+				z-index: 1;
+			"
+			>
+		{/if}
 	</div>
 </div>

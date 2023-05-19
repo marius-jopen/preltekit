@@ -21,16 +21,14 @@
 		src720p = slice.primary.video_720_video
 		src1080p = slice.primary.video_1080_video
 		srcVideo = slice.primary.video_video
-		poster = slice.primary.video_poster_video.url+"?&w=" + width + "fm=webp&lossless=true"
+		poster = slice.primary.video_poster_video.url+"?&w=" + width
 		text = slice.primary.video_caption_video
 	}
 </script>
 
-<div bind:offsetWidth={width} class="border-t border-text/20">
-	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 sm:py-12">
-		<div class="mx-auto max-w-3xl">
-			<Video {src240p} {src360p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="mb-2" control muted loop autoplay />
-			<Text field={text} />
-		</div>
+<div class="border-b border-text/20">
+	<div class="mx-auto max-w-4xl px-4 sm:px-8 py-4 sm:py-12" bind:offsetWidth={width}>
+		<Video {src240p} {src360p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="mb-2" control muted loop autoplay />
+		<Text field={text} />
 	</div>
-</div>
+</div>	

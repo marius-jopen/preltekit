@@ -10,10 +10,8 @@
 	}
 </script>
 
-<div class="border-t border-text/20">
-	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 sm:py-12">
-		<div class="mx-auto max-w-3xl">
-			<Slider sliderRatio={0.5} input={slider} />
-		</div>
+<div class="border-b border-text/20">
+	<div class="mx-auto max-w-4xl px-4 sm:px-8 py-4 sm:py-12">
+		<Slider sliderRatio={0.5} input={slider} />
 	</div>
 </div>
