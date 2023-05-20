@@ -7,7 +7,7 @@
 {#if slices}
 	<div class="allSlices">
 		{#each slices as slice}
-      <Slice {slice} />
+      		<Slice {slice} />
 		{/each}
 	</div>
 {/if}

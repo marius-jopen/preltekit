@@ -1,6 +1,6 @@
 <script>
 	import Seo from "$lib/functionality/seo.svelte"
-  import Text from "$lib/atoms/text.svelte"
+	import Text from "$lib/atoms/text.svelte"
 
 	export let data
 
@@ -13,6 +13,6 @@
 	<Seo {document} {setup} />
 	
 	{#if data}
-		<Text classes="h4 text-center pt-16 pb-16" plain field={data.document.data.title} />
+		<Text classes="text-center pt-16 pb-16" plain field={data.document.data.title} />
 	{/if}
 {/key}

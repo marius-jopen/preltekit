@@ -2,7 +2,7 @@
 	import Hamburger from 'svelte-hamburgers'
 	import { fade } from 'svelte/transition'
 	import Text from "$lib/atoms/text.svelte"
-  import NavigationDropdownAccordeon from '$lib/modules/navigation/navigation-dropdown-accordeon.svelte';
+	import NavigationDropdownAccordeon from '$lib/modules/navigation/navigation-dropdown-accordeon.svelte';
 	import { headerHeight, navigationStatus } from '$lib/functionality/stores'
 
 	export let setup

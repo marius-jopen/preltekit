@@ -22,7 +22,7 @@
 
 	let title = asText(document.data.seo_title)
 		? asText(document.data.seo_title) + ` ${divider} ${asText(websiteTitle)}` : asText(document.data.title)
-			? asText(document.data.title) + ` ${divider} ${asText(websiteTitle)}` : asText(setup.data.seo_title)
+		? asText(document.data.title) + ` ${divider} ${asText(websiteTitle)}` : asText(setup.data.seo_title)
 
 	let description = asText(document.data.seo_description)
 		? asText(setup.data.seo_description) : asText(setup.data.seo_description)

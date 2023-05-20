@@ -7,7 +7,7 @@
 	export let transitionTime = 0.5
 
 	let element
-  let intersecting = false
+	let intersecting = false
 	let width
 	let imgx
 	let loaded
@@ -60,7 +60,7 @@
 </div>
 
 <style lang="postcss">
-  img.active {
-    opacity: 1 !important;
-  }
+	img.active {
+		opacity: 1 !important;
+	}
 </style>

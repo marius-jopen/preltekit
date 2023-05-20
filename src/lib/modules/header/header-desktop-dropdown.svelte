@@ -5,8 +5,6 @@
 
 	export let setup
 
-	console.log(setup)
-
 	let height = 70
 
 	$: headerHeight.set(height)

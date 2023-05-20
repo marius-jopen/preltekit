@@ -1,5 +1,5 @@
 <script>
-  import Slider from "$lib/modules/slider/slider.svelte"
+	import Slider from "$lib/modules/slider/slider.svelte"
 
 	export let slice
 

@@ -1,13 +1,13 @@
 <script>
-	import { asText, asHTML, isFilled } from '@prismicio/helpers'
+  import { asText, asHTML, isFilled } from '@prismicio/helpers'
 
-	export let field // A Prismic rich text field or a simple string
-	export let inline = false
-	export let plain = false
-	export let classes = ""
-	export let styles = ""
-	export let prepend = ""
-	export let append = ""
+  export let field // A Prismic rich text field or a simple string
+  export let inline = false
+  export let plain = false
+  export let classes = ""
+  export let styles = ""
+  export let prepend = ""
+  export let append = ""
 </script>
 
 {#if $$slots.default}
@@ -31,7 +31,7 @@
 		{/if}
 	{:else if isFilled.field}
     <div class="{classes}" style="{styles}">
-        {`${prepend} `}{field}{` ${append}`}
+      {`${prepend} `}{field}{` ${append}`}
     </div>
   {/if}
 {/if}

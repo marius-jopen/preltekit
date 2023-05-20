@@ -1,5 +1,5 @@
 <script>
-  import { dev } from "$app/environment"
+	import { dev } from "$app/environment"
 	import Comment from "$lib/functionality/comment.svelte"
 
 	// Basic
@@ -25,19 +25,19 @@
 
 	}
 
-  const missingSlice = (key) => !Object.keys(mappings).includes(key)
+	const missingSlice = (key) => !Object.keys(mappings).includes(key)
 </script>
 
 <div class="slice">
-  <Comment comment={slice.slice_type} />
+	<Comment comment={slice.slice_type} />
 
 	{#if slice.slice_label == null}
-  	<svelte:component this={mappings[slice.slice_type]} {slice} />
+		<svelte:component this={mappings[slice.slice_type]} {slice} />
 	{:else}
 		<svelte:component this={mappings[slice.slice_type + slice.slice_label]} {slice} />
 	{/if}
 
-  {#if dev && missingSlice(slice.slice_type)}
-    <pre>Missing module for {slice.slice_type}</pre>
-  {/if}
+	{#if dev && missingSlice(slice.slice_type)}
+		<pre>Missing module for {slice.slice_type}</pre>
+	{/if}
 </div>
