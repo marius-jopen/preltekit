@@ -1,11 +1,11 @@
 <script>
-	import Duration from '$lib/atoms/video/duration.svelte'
-	import Fullscreen from '$lib/atoms/video/fullscreen.svelte'
-	import Player from '$lib/atoms/video/player.svelte'
-	import Button from '$lib/atoms/video/button.svelte'
-	import ButtonScreen from '$lib/atoms/video/button-screen.svelte'
-	import Time from '$lib/atoms/video/time.svelte'
-	import Progress from '$lib/atoms/video/progress.svelte'
+	import Duration from '$lib/modules/video/duration.svelte'
+	import Fullscreen from '$lib/modules/video/fullscreen.svelte'
+	import Player from '$lib/modules/video/player.svelte'
+	import Button from '$lib/modules/video/button.svelte'
+	import ButtonScreen from '$lib/modules/video/button-screen.svelte'
+	import Time from '$lib/modules/video/time.svelte'
+	import Progress from '$lib/modules/video/progress.svelte'
 
 	export let src240p = ''
 	export let src360p = ''

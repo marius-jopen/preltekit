@@ -1,6 +1,6 @@
 <script>
 	import { kebabCase } from '$lib/functionality/strings'
-
+	
 	export let categories
 	export let category
 	export let type

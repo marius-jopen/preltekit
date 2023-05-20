@@ -1,6 +1,6 @@
 <script>
 	import Text from "$lib/atoms/text.svelte"
-	import Video from "$lib/atoms/video/index.svelte"
+	import Video from "$lib/modules/video/index.svelte"
 
 	export let text = ''
 	export let poster = ''
