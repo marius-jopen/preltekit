@@ -12,5 +12,8 @@
 
 {#key data}
 	<Seo {document} {setup} />
-	<Slices slices={document.data.body} />
+
+	{#if data}
+		<Slices slices={document.data.body} />
+	{/if}
 {/key}

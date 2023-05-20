@@ -1,64 +1,66 @@
 <script>
 	import IntersectionObserver from "svelte-intersection-observer"
-	import { fade } from 'svelte/transition'
 
 	export let src
-	export let transitionTime = 300
 	export let classContainer = ""
 	export let classImage = ""
+	export let transitionTime = 0.5
 
 	let element
   let intersecting = false
 	let width
 	let imgx
+	let loaded
+	let alt = "image"
 
-	// Generates the image url with the width of the container
-	$: imgx = src.url + "&w=" + width
+	if(src.alt) alt = src.alt
+
+	$: imgx = src.url + "fm=avif&w=" + width + "&auto=format,compress"
 </script>
 
-<!-- Container of the image, css can be changed -->
 <div class="{classContainer}">
+	<IntersectionObserver once {element} bind:intersecting>
+		<div bind:offsetWidth={width} bind:this={element} class="w-full" />
+	</IntersectionObserver>
 
-	<!-- Container which is relative, that the position absolute is working -->
-	<div class="relative">
-		<!-- Intersection observer to check if the container is in the viewport, also measures the width of the container -->
-		<IntersectionObserver once {element} bind:intersecting>
-			<div bind:offsetWidth={width} bind:this={element} class="w-full" />
-		</IntersectionObserver>
-	
-		<!-- Blurry image -->
+	<div class="relative w-full overflow-hidden">
 		<img 
-		alt="{src.alt}" 
-		src="{src.url}?fm=blurhash&w-10" 
+		alt="{alt}-placeholder" 
+		src="{src.url}?fm=avif&w=10&blur=10&auto=format,compress" 
 		class="{classImage}"
 		style="
-			transition: opacity 0s;
-			transition-delay: {transitionTime * 2}ms;
 			width: 100%;
-			opacity: {width ? '0' : '1'};
 		" 
 		>
 	
-		<!-- Final image, is visible when the size of the container is known and when the contaienr is in view -->
-		{#if width && intersecting}
+		{#if intersecting}
 			<img
-			transition:fade={{duration: transitionTime}}
-			alt="{src.alt}"
+			on:load={e => loaded = true}
+			alt="{alt}"
 			src="{imgx}"
 			srcset="
 				{imgx}&dpr=1 1x,
 				{imgx}&dpr=2 2x,
 				{imgx}&dpr=3 3x
 			"
-			class="{classImage}"
+			class="{loaded ? 'active' : ''} {classImage}"
 			style="
 				top: 0px;
 				left: 0px;
 				width: 100%;
 				position: absolute;
 				z-index: 1;
+				opacity: 0;
+				transition: opacity {transitionTime}s;
+				width: 100%;
 			"
 			>
 		{/if}
 	</div>
 </div>
+
+<style lang="postcss">
+  img.active {
+    opacity: 1 !important;
+  }
+</style>

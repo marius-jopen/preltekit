@@ -12,7 +12,10 @@
 
 {#key data}
 	<Seo {setup} {document} />
-	<Text classes="h4 text-center pt-16 pb-8" plain field={data.document.data.title} />
-	<Text classes="px-4 text-center pb-12" field={data.document.data.description} />
-	<Index type="projects" {data} />
+	
+	{#if data}
+		<Text classes="h4 text-center pt-16 pb-8" plain field={data.document.data.title} />
+		<Text classes="px-4 text-center pb-12" field={data.document.data.description} />
+		<Index type="projects" {data} />
+	{/if}
 {/key}

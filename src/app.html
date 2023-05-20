@@ -8,8 +8,8 @@
 		%sveltekit.head%
 	</head>
 
-	<body class="antialiased font-body bg-background text-text overflow-x-hidden w-screen">
-		<div id="svelte">
+	<body data-sveltekit-preload-data="hover"  class="antialiased font-body bg-background text-text overflow-x-hidden w-screen">
+		<div id="svelte" style="display: contents">
 			%sveltekit.body%
 		</div>
 	</body>

@@ -60,7 +60,7 @@
 	}}>
 		{#each input as item}
 			<SplideSlide>
-				<Image src={item.image_slider} classes='h-full object-cover' classesOuter='h-full' />
+				<Image src={item.image_slider} />
 			</SplideSlide>
 		{/each}
 	</Splide>

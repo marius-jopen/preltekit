@@ -11,5 +11,8 @@
 
 {#key data}
 	<Seo {document} {setup} />
-	<Text classes="h4 text-center pt-16 pb-16" plain field={data.document.data.title} />
+	
+	{#if data}
+		<Text classes="h4 text-center pt-16 pb-16" plain field={data.document.data.title} />
+	{/if}
 {/key}
