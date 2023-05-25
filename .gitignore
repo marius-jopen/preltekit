@@ -4,6 +4,7 @@ node_modules
 /.svelte-kit
 /package
 .env
+/test-results
 
 # Local Netlify folder
 .netlify
