@@ -69,7 +69,7 @@
 	</Splide>
 
 	{#if totalSlides > 1}
-		<button
+		<div
 			on:click={prevSlide}
 			class="-mt-6 absolute top-0 left-0 w-1/2 p-1 cursor-pointer z-10 h-full flex justify-center flex-col opacity-0 hover:opacity-100 transition-opacity duration-300"
 		>
@@ -94,9 +94,9 @@
 					></svg
 				>
 			</div>
-		</button>
+		</div>
 
-		<button
+		<div
 			on:click={nextSlide}
 			class="-mt-6 absolute top-0 right-0 w-1/2 p-1 cursor-pointer z-10 h-full flex justify-center flex-col opacity-0 hover:opacity-100 transition-opacity duration-300"
 		>
@@ -121,7 +121,7 @@
 					></svg
 				>
 			</div>
-		</button>
+		</div>
 	{/if}
 
 	<div class="flex w-full justify-between bg-background py-2">
