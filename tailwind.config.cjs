@@ -12,7 +12,7 @@ const config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'body': ['font-1', ...defaultTheme.fontFamily.mono]
+				'body': ['inter', ...defaultTheme.fontFamily.sans]
 			},
 			colors: {
 				'background': 'rgb(242 240 246)',
