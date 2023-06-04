@@ -4,10 +4,10 @@ import adapter from '@sveltejs/adapter-netlify';
 
 const config = {
 	preprocess: [
-    preprocess({
-      postcss: true,
-    }),
-  ],
+		preprocess({
+			postcss: true
+		})
+	],
 
 	kit: {
 		adapter: adapter()

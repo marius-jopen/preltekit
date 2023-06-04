@@ -1,13 +1,13 @@
 <script>
-	import Text from "$lib/atoms/text.svelte"
+	import Text from '$lib/atoms/text.svelte';
 
-	export let text
-	export let centered = ''
-	export let slice
+	export let text;
+	export let centered = '';
+	export let slice;
 
-	if(slice) {
-		text = slice.primary.text_text
-		centered = slice.primary.centered_text
+	if (slice) {
+		text = slice.primary.text_text;
+		centered = slice.primary.centered_text;
 	}
 </script>
 

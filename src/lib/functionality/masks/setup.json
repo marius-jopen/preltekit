@@ -1,93 +1,93 @@
 {
-  "Main" : {
-    "title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
-        "label" : "Title"
-      }
-    },
-    "navigation_header" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "title" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
-              "label" : "Title"
-            }
-          },
-          "link" : {
-            "type" : "Link",
-            "config" : {
-              "allowTargetBlank" : true,
-              "label" : "Link",
-              "select" : null
-            }
-          },
-          "level" : {
-            "type" : "Select",
-            "config" : {
-              "options" : [ "default", "parent", "child" ],
-              "default_value" : "default",
-              "label" : "Level"
-            }
-          }
-        },
-        "label" : "Navigation Header"
-      }
-    },
-    "navigation_footer" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "title" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
-              "label" : "Title"
-            }
-          },
-          "link" : {
-            "type" : "Link",
-            "config" : {
-              "allowTargetBlank" : true,
-              "label" : "Link",
-              "select" : null
-            }
-          }
-        },
-        "label" : "Navigation Footer"
-      }
-    }
-  },
-  "Seo" : {
-    "seo_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "label" : "SEO Title"
-      }
-    },
-    "seo_description" : {
-      "type" : "StructuredText",
-      "config" : {
-        "label" : "SEO Description"
-      }
-    },
-    "seo_language" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "SEO Language"
-      }
-    },
-    "seo_image" : {
-      "type" : "Image",
-      "config" : {
-        "constraint" : { },
-        "thumbnails" : [ ],
-        "label" : "SEO Image"
-      }
-    }
-  }
+	"Main": {
+		"title": {
+			"type": "StructuredText",
+			"config": {
+				"single": "heading1,heading2,heading3,heading4,heading5,heading6",
+				"label": "Title"
+			}
+		},
+		"navigation_header": {
+			"type": "Group",
+			"config": {
+				"fields": {
+					"title": {
+						"type": "StructuredText",
+						"config": {
+							"single": "heading1,heading2,heading3,heading4,heading5,heading6",
+							"label": "Title"
+						}
+					},
+					"link": {
+						"type": "Link",
+						"config": {
+							"allowTargetBlank": true,
+							"label": "Link",
+							"select": null
+						}
+					},
+					"level": {
+						"type": "Select",
+						"config": {
+							"options": ["default", "parent", "child"],
+							"default_value": "default",
+							"label": "Level"
+						}
+					}
+				},
+				"label": "Navigation Header"
+			}
+		},
+		"navigation_footer": {
+			"type": "Group",
+			"config": {
+				"fields": {
+					"title": {
+						"type": "StructuredText",
+						"config": {
+							"single": "heading1,heading2,heading3,heading4,heading5,heading6",
+							"label": "Title"
+						}
+					},
+					"link": {
+						"type": "Link",
+						"config": {
+							"allowTargetBlank": true,
+							"label": "Link",
+							"select": null
+						}
+					}
+				},
+				"label": "Navigation Footer"
+			}
+		}
+	},
+	"Seo": {
+		"seo_title": {
+			"type": "StructuredText",
+			"config": {
+				"label": "SEO Title"
+			}
+		},
+		"seo_description": {
+			"type": "StructuredText",
+			"config": {
+				"label": "SEO Description"
+			}
+		},
+		"seo_language": {
+			"type": "Text",
+			"config": {
+				"label": "SEO Language"
+			}
+		},
+		"seo_image": {
+			"type": "Image",
+			"config": {
+				"constraint": {},
+				"thumbnails": [],
+				"label": "SEO Image"
+			}
+		}
+	}
 }

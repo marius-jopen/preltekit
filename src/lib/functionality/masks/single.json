@@ -1,33 +1,33 @@
 {
-  "Main" : {
-    "title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
-        "label" : "Title"
-      }
-    }
-  },
-  "Seo" : {
-    "seo_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "label" : "SEO Title"
-      }
-    },
-    "seo_description" : {
-      "type" : "StructuredText",
-      "config" : {
-        "label" : "SEO Description"
-      }
-    },
-    "seo_image" : {
-      "type" : "Image",
-      "config" : {
-        "constraint" : { },
-        "thumbnails" : [ ],
-        "label" : "SEO Image"
-      }
-    }
-  }
+	"Main": {
+		"title": {
+			"type": "StructuredText",
+			"config": {
+				"single": "heading1,heading2,heading3,heading4,heading5,heading6",
+				"label": "Title"
+			}
+		}
+	},
+	"Seo": {
+		"seo_title": {
+			"type": "StructuredText",
+			"config": {
+				"label": "SEO Title"
+			}
+		},
+		"seo_description": {
+			"type": "StructuredText",
+			"config": {
+				"label": "SEO Description"
+			}
+		},
+		"seo_image": {
+			"type": "Image",
+			"config": {
+				"constraint": {},
+				"thumbnails": [],
+				"label": "SEO Image"
+			}
+		}
+	}
 }

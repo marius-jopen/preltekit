@@ -1,26 +1,21 @@
 <script>
-  import Categories from "$lib/modules/index/categories.svelte"
-  import ItemsProject from '$lib/modules/index/index-items.svelte'
+	import Categories from '$lib/modules/index/categories.svelte';
+	import ItemsProject from '$lib/modules/index/index-items.svelte';
 
-	export let data
-	export let type
+	export let data;
+	export let type;
 
 	// START CATEGORIES FILTER -> REACTIVE
-	let { category,
-    categories,
-    setup,
-    document,
-    filtered
-  } = data
+	let { category, categories, setup, document, filtered } = data;
 
-  $: {
-    if (data) {
-      category = data.category
-      setup = data.setup
-      document = data.document
-      filtered = data.filtered
-    }
-  }
+	$: {
+		if (data) {
+			category = data.category;
+			setup = data.setup;
+			document = data.document;
+			filtered = data.filtered;
+		}
+	}
 	// END CATEGORIES FILTER -> REACTIVE
 </script>
 

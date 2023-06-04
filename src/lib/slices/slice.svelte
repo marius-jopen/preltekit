@@ -1,17 +1,17 @@
 <script>
-	import { dev } from "$app/environment"
-	import Comment from "$lib/functionality/comment.svelte"
+	import { dev } from '$app/environment';
+	import Comment from '$lib/functionality/comment.svelte';
 
 	// Basic
-	import Text from "$lib/slices/basic/text-slice.svelte"
-	import Video from "$lib/slices/basic/video-slice.svelte"
-	import Image from "$lib/slices/basic/image-slice.svelte"
-	import Embed from "$lib/slices/basic/embed-slice.svelte"
-	import Slider from "$lib/slices/basic/slider-slice.svelte"
+	import Text from '$lib/slices/basic/text-slice.svelte';
+	import Video from '$lib/slices/basic/video-slice.svelte';
+	import Image from '$lib/slices/basic/image-slice.svelte';
+	import Embed from '$lib/slices/basic/embed-slice.svelte';
+	import Slider from '$lib/slices/basic/slider-slice.svelte';
 
 	// Custom
 
-	export let slice
+	export let slice;
 
 	const mappings = {
 		// Basic
@@ -19,13 +19,12 @@
 		image: Image,
 		video: Video,
 		slider: Slider,
-		embed: Embed,
+		embed: Embed
 
 		// Custom
+	};
 
-	}
-
-	const missingSlice = (key) => !Object.keys(mappings).includes(key)
+	const missingSlice = (key) => !Object.keys(mappings).includes(key);
 </script>
 
 <div class="slice">

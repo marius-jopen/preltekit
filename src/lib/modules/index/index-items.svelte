@@ -1,7 +1,7 @@
 <script>
-	import ItemProject from "$lib/modules/index/index-item.svelte"
+	import ItemProject from '$lib/modules/index/index-item.svelte';
 
-	export let items
+	export let items;
 </script>
 
 <div class="w-full px-10 sm:flex flex-wrap justify-center">

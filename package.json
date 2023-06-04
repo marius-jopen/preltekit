@@ -1,7 +1,7 @@
 {
-	"name": "my-app",
+	"name": "preltekit",
 	"version": "0.0.1",
-	"private": true,
+	"private": false,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -13,14 +13,13 @@
 	},
 	"devDependencies": {
 		"@prismicio/client": "^6.7.1",
-		"@prismicio/helpers": "^2.3.3",	
+		"@prismicio/helpers": "^2.3.3",
 		"@sveltejs/adapter-netlify": "next",
 		"@splidejs/splide-extension-auto-scroll": "^0.3.4",
-		"@splidejs/svelte-splide": "^0.1.15",	
+		"@splidejs/svelte-splide": "^0.1.15",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.5.0",
 		"autoprefixer": "^10.4.14",
-
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.26.0",
@@ -31,11 +30,9 @@
 		"svelte-hamburgers": "^3.0.1",
 		"svelte-preprocess": "^5.0.3",
 		"svelte-scrollto": "^0.2.0",
-
-		"typescript": "^5.0.0",
 		"tailwindcss": "^3.3.1",
+		"typescript": "^5.0.0",
 		"svgson": "^5.2.1",
-
 		"vite": "^4.3.0"
 	},
 	"type": "module",

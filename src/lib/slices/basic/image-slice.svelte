@@ -1,20 +1,20 @@
 <script>
-	import Text from "$lib/atoms/text.svelte"
-	import Image from "$lib/atoms/image.svelte"
+	import Text from '$lib/atoms/text.svelte';
+	import Image from '$lib/atoms/image.svelte';
 
-	export let text = ''
-	export let src = ''
-	export let slice
+	export let text = '';
+	export let src = '';
+	export let slice;
 
-	if(slice) {
-		src = slice.primary.image_image
-		text = slice.primary.image_caption_image
+	if (slice) {
+		src = slice.primary.image_image;
+		text = slice.primary.image_caption_image;
 	}
 </script>
 
 <div class="border-b border-text/20">
 	<div class="mx-auto max-w-4xl px-4 sm:px-8 py-4 sm:py-12">
-		<Image {src} classContainer="pb-2"/>
+		<Image {src} classContainer="pb-2" />
 		<Text field={text} />
 	</div>
 </div>

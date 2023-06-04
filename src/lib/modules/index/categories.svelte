@@ -1,11 +1,12 @@
 <script>
-	import { kebabCase } from '$lib/functionality/strings'
-	
-	export let categories
-	export let category
-	export let type
-	export let itemClasses = 'rounded-xl bg-text/10 px-6 py-0.5 hover:bg-text/20 transition-colors duration-200'
-	export let activeClass = 'bg-text/50 hover:bg-text/50'
+	import { kebabCase } from '$lib/functionality/strings';
+
+	export let categories;
+	export let category;
+	export let type;
+	export let itemClasses =
+		'rounded-xl bg-text/10 px-6 py-0.5 hover:bg-text/20 transition-colors duration-200';
+	export let activeClass = 'bg-text/50 hover:bg-text/50';
 </script>
 
 <div>
@@ -17,7 +18,7 @@
 			class="{itemClasses} {!category ? activeClass : ''}"
 		>
 			All
-	</a>
+		</a>
 
 		{#each categories as c}
 			<a

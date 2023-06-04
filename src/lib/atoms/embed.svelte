@@ -1,7 +1,7 @@
 <script>
-	export let embedCode
-	export let classes
-	export let responsive = false
+	export let embedCode;
+	export let classes;
+	export let responsive = false;
 </script>
 
 <div class="{responsive ? 'embed-container' : ''} {classes}">

@@ -1,13 +1,14 @@
 <script>
-	import NavigationDropdown from "$lib/modules/navigation/navigation-dropdown.svelte"
-	import Text from "$lib/atoms/text.svelte"
-	import { headerHeight } from '$lib/functionality/stores'
+	import NavigationDropdown from '$lib/modules/navigation/navigation-dropdown.svelte';
+	import Text from '$lib/atoms/text.svelte';
+	import { headerHeight } from '$lib/functionality/stores';
 
-	export let setup
+	export let setup;
 
-	let height = 70
 
-	$: headerHeight.set(height)
+	let height = 70;
+
+	$: headerHeight.set(height);
 </script>
 
 <header bind:clientHeight={height} class="hidden sm:block fixed top-0 left-0 z-50 w-full">

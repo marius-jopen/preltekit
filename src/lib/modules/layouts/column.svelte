@@ -2,27 +2,22 @@
 	<div class="block w-full content">
 		<!-- Mobile -->
 		<div class="block md:hidden">
-			<slot name="mobile">
-			</slot>
+			<slot name="mobile" />
 		</div>
 
 		<!-- Left -->
 		<div class="hidden md:block w-1/2 float-left h-full border-lines-1 border-r">
-			<slot name="left">
-			</slot>
+			<slot name="left" />
 		</div>
 
 		<!-- Right -->
 		<div class="right-box md:w-1/2 float-left sm:sticky top-16">
-			<slot name="right">
-			</slot>
+			<slot name="right" />
 		</div>
 	</div>
 
-	<div class="border-lines-1 border-b w-full -mt-1px">
-	</div>
+	<div class="border-lines-1 border-b w-full -mt-1px" />
 </div>
-
 
 <style lang="postcss">
 	.parent {
@@ -30,7 +25,7 @@
 	}
 
 	.content:after {
-		content: "";
+		content: '';
 		display: table;
 		clear: both;
 	}

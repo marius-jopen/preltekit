@@ -1,12 +1,12 @@
 <script>
-	import Slider from "$lib/modules/slider/slider.svelte"
+	import Slider from '$lib/modules/slider/slider.svelte';
 
-	export let slice
+	export let slice;
 
-	let slider = ''
+	let slider = '';
 
-	if(slice) {
-		slider = slice.items
+	if (slice) {
+		slider = slice.items;
 	}
 </script>
 

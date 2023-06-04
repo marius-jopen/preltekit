@@ -1,13 +1,13 @@
 <script>
-	import Slice from '$lib/slices/slice.svelte'
+	import Slice from '$lib/slices/slice.svelte';
 
-	export let slices
+	export let slices;
 </script>
 
 {#if slices}
 	<div class="allSlices">
 		{#each slices as slice}
-      		<Slice {slice} />
+			<Slice {slice} />
 		{/each}
 	</div>
 {/if}
