@@ -8,11 +8,11 @@
 	import * as animateScroll from 'svelte-scrollto';
 
 	export let document;
-	export let href = false;
+	export let href = ""
 
 	export let classes = '';
-	export let prefetch = ''; // empty string for on
-	export let reload = 'off'; // off for disabled
+	// export let prefetch = ''; // empty string for on
+	// export let reload = 'off'; // off for disabled
 	export let activeClass = 'underline underline-offset-2 decoration-1';
 	export let isNav = false;
 
@@ -35,10 +35,8 @@
 {#if href}
 	<a
 		on:click={closeNavigation}
-		href={href == '/home' ? '/' : href}
+		href={href === '/home' ? '/' : href}
 		class="cursor-pointer {classes} {active ? activeClass : ''}"
-		data-sveltekit-prefetch={prefetch}
-		data-sveltekit-reload={reload}
 	>
 		<slot />
 	</a>

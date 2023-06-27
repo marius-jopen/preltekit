@@ -18,11 +18,11 @@
 	></script>
 </svelte:head>
 
-<HeaderDesktopDropdown {setup} />
-<HeaderMobileDropdown {setup} />
+<HeaderDesktopDropdown />
+<HeaderMobileDropdown />
 
 <div class="min-h-screen">
 	<slot />
 </div>
 
-<Footer {setup} />
+<Footer />

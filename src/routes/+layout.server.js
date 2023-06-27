@@ -1,24 +1,21 @@
-import { parse } from 'svgson';
 import createClient from '$lib/preltekit/client';
 
 export async function load({ fetch, request }) {
-	const icons = import.meta.glob(`$lib/modules/icons/batch-oval/*.svg`, { as: 'raw' });
 	const api = await createClient({ fetch, request });
+
+  // By default we load all the document types we need for the site to function
 	const setup = await api.getSingle('setup');
-	const glossary = await api.getAllByType('glossary_item');
-	const lib = {};
+  const projects = await api.getAllByType("project")
+  const pages = await api.getAllByType("page")
+  const home = pages.find(page => page.uid === 'home')
 
-	for (const svgPath in icons) {
-		const key = svgPath.replace(`/src/lib/modules/icons/batch-oval/`, '').replace('.svg', '');
-		const svgString = await icons[svgPath]();
-		lib[key] = await parse(svgString);
-	}
 
-	if (setup && glossary) {
+	if (setup && projects && pages && home) {
 		return {
 			setup,
-			glossary,
-			iconLibrary: lib
+      projects,
+      pages,
+      home
 		};
 	}
 }

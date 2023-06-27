@@ -1,11 +1,11 @@
 <script>
+  import { page } from "$app/stores"
 	import Hamburger from 'svelte-hamburgers';
 	import { fade } from 'svelte/transition';
 	import Text from '$lib/atoms/text.svelte';
 	import NavigationDropdownAccordeon from '$lib/modules/navigation/navigation-dropdown-accordeon.svelte';
 	import { headerHeight, navigationStatus } from '$lib/preltekit/stores';
 
-	export let setup;
 	export let open = false; // starts closed
 
 	let height = 70;
@@ -35,8 +35,8 @@
 	bind:clientHeight={height}
 	class="bg-background h-16 border-b border-text/20 sm:hidden flex top-0 fixed w-screen z-[60] px-2 transition-colors justify-between cursor-pointer pt-2 text-black"
 >
-	<a data-sveltekit-prefetch on:click={close} class="pt-2.5 pl-2" href="/">
-		<Text plain field={setup.data.title} />
+	<a on:click={close} class="pt-2.5 pl-2" href="/">
+		<Text plain field={$page.data.setup.data.title} />
 	</a>
 
 	<div class="pt-0.5">
@@ -56,7 +56,7 @@
 {#if $navigationStatus == true}
 	<div class="block sm:hidden top-12 h-screen fixed w-screen z-50 bg-background" transition:fade>
 		<div class="h-full px-8 text-center flex justify-center flex-col -mt-8 leading-8">
-			<NavigationDropdownAccordeon document={setup.data.navigation_header} />
+			<NavigationDropdownAccordeon document={$page.data.setup.data.navigation_header} />
 		</div>
 	</div>
 {/if}

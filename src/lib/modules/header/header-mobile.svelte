@@ -1,10 +1,9 @@
 <script>
+  import { page } from "$app/stores"
 	import Hamburger from 'svelte-hamburgers';
 	import { fade } from 'svelte/transition';
 	import Text from '$lib/atoms/text.svelte';
 	import Navigation from '$lib/modules/navigation/navigation.svelte';
-
-	export let setup;
 
 	let height = 0;
 	let open = false;
@@ -29,8 +28,8 @@
 	bind:clientHeight={height}
 	class="h-16 border-b border-text sm:hidden flex top-0 fixed w-screen z-50 px-2 bg-background justify-between cursor-pointer pt-2"
 >
-	<a data-sveltekit-prefetch on:click={close} class="pt-2 pl-2" href="/">
-		<Text plain field={setup.data.title} />
+	<a on:click={close} class="pt-2 pl-2" href="/">
+		<Text plain field={$page.data.setup.data.title} />
 	</a>
 
 	<div class="pt-0.5">
@@ -51,7 +50,7 @@
 		transition:fade
 	>
 		<div class="flex flex-col text-center -mt-20 leading-8" on:click={close}>
-			<Navigation document={setup.data.navigation_header} />
+			<Navigation document={$page.data.setup.data.navigation_header} />
 		</div>
 	</div>
 {/if}

@@ -1,10 +1,7 @@
 import { makeCases } from '$lib/preltekit/strings';
 import createClient from '$lib/preltekit/client';
 
-export async function load({ url, parent, fetch, request }) {
-	const p = await parent();
-	const { setup } = p;
-
+export async function load({ url, fetch, request }) {
 	const api = await createClient({ fetch, request });
 	const category = url.searchParams.get('category') || false;
 	const cases = category ? makeCases(category) : false;
@@ -38,12 +35,11 @@ export async function load({ url, parent, fetch, request }) {
 		];
 	}
 
-	if (setup && document) {
+	if (document) {
 		return {
+			document,
 			filtered,
 			category,
-			document,
-			setup,
 			categories
 		};
 	}

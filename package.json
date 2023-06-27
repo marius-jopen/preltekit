@@ -14,16 +14,17 @@
 	"devDependencies": {
 		"@prismicio/client": "^6.7.1",
 		"@prismicio/helpers": "^2.3.3",
-		"@sveltejs/adapter-netlify": "next",
 		"@splidejs/splide-extension-auto-scroll": "^0.3.4",
 		"@splidejs/svelte-splide": "^0.1.15",
 		"@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/adapter-netlify": "^2.0.7",
 		"@sveltejs/kit": "^1.5.0",
 		"autoprefixer": "^10.4.14",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.26.0",
 		"prettier": "^2.8.0",
+    "svelte-intersection-observer": "^0.10.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"svelte": "^3.54.0",
 		"svelte-check": "^3.0.1",
@@ -32,12 +33,7 @@
 		"svelte-scrollto": "^0.2.0",
 		"tailwindcss": "^3.3.1",
 		"typescript": "^5.0.0",
-		"svgson": "^5.2.1",
 		"vite": "^4.3.0"
 	},
-	"type": "module",
-	"dependencies": {
-		"@sveltejs/adapter-netlify": "^2.0.7",
-		"svelte-intersection-observer": "^0.10.0"
-	}
+	"type": "module"
 }

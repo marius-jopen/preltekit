@@ -2,7 +2,8 @@
 	import { page } from '$app/stores';
 	import { asText, isFilled } from '@prismicio/helpers';
 
-	export let setup;
+  const setup = $page.data.setup
+
 	export let document;
 	export let divider = '|';
 	export let withTitle = true;

@@ -1,9 +1,8 @@
 <script>
+  import { page } from "$app/stores"
 	import Navigation from '$lib/modules/navigation/navigation.svelte';
 	import Text from '$lib/atoms/text.svelte';
 	import { headerHeight } from '$lib/preltekit/stores';
-
-	export let setup;
 
 	let height = 0;
 
@@ -13,11 +12,11 @@
 <header bind:clientHeight={height} class="hidden sm:block fixed top-0 left-0 z-50 w-full">
 	<div class="flex justify-between px-4 py-2 bg-background border-b border-text/20">
 		<a href="/">
-			<Text plain field={setup.data.title} />
+			<Text plain field={$page.data.setup.data.title} />
 		</a>
 
 		<div class="flex gap-3">
-			<Navigation document={setup.data.navigation_header} />
+			<Navigation document={$page.data.setup.data.navigation_header} />
 		</div>
 	</div>
 </header>

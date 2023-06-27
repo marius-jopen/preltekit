@@ -5,13 +5,13 @@
 
 	export let data;
 
-	const { setup, document } = data;
+	const { document } = data;
 
 	$: data;
 </script>
 
 {#key data}
-	<Seo {setup} {document} />
+	<Seo {document} />
 
 	{#if data}
 		<Text classes="text-center pt-16 pb-8" plain field={data.document.data.title} />

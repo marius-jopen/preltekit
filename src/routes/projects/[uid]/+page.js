@@ -1,11 +1,11 @@
 import { error } from '@sveltejs/kit';
-import createClient from '$lib/preltekit/client';
 
-export async function load({ fetch, params, request }) {
+export async function load({ parent, params }) {
+  const data = await parent()
 	const { uid } = params;
 
-	const api = createClient({ fetch, request });
-	const document = await api.getByUID('project', uid);
+  // Get the right document from your docs
+  const document = data?.projects?.find(({ uid: projectUid }) => uid === projectUid)
 
 	if (document) {
 		return { document };
