@@ -1,0 +1,32 @@
+[
+	{
+		"id": "setup",
+		"name": "Setup",
+		"repeatable": false,
+		"value": "setup.json"
+	},
+	{
+		"id": "page",
+		"name": "Page",
+		"repeatable": true,
+		"value": "page.json"
+	},
+	{
+		"id": "project",
+		"name": "Project",
+		"repeatable": true,
+		"value": "project.json"
+	},
+	{
+		"id": "projects",
+		"name": "Projects",
+		"repeatable": false,
+		"value": "projects.json"
+	},
+	{
+		"id": "single",
+		"name": "Single",
+		"repeatable": false,
+		"value": "single.json"
+	},
+]
