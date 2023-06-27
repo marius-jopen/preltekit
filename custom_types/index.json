@@ -28,5 +28,5 @@
 		"name": "Single",
 		"repeatable": false,
 		"value": "single.json"
-	},
+	}
 ]
