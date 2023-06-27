@@ -1,6 +1,6 @@
 <script>
 	import { dev } from '$app/environment';
-	import Comment from '$lib/functionality/comment.svelte';
+	import Comment from '$lib/preltekit/comment.svelte';
 
 	// Basic
 	import Text from '$lib/slices/basic/text-slice.svelte';

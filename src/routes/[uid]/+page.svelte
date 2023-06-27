@@ -1,5 +1,5 @@
 <script>
-	import Seo from '$lib/functionality/seo.svelte';
+	import Seo from '$lib/preltekit/seo.svelte';
 	import Slices from '$lib/slices/slices.svelte';
 
 	export let data;

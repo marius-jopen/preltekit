@@ -1,5 +1,5 @@
-import { makeCases } from '$lib/functionality/strings';
-import createClient from '$lib/functionality/client';
+import { makeCases } from '$lib/preltekit/strings';
+import createClient from '$lib/preltekit/client';
 
 export async function load({ url, parent, fetch, request }) {
 	const p = await parent();

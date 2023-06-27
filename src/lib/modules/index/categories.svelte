@@ -1,5 +1,5 @@
 <script>
-	import { kebabCase } from '$lib/functionality/strings';
+	import { kebabCase } from '$lib/preltekit/strings';
 
 	export let categories;
 	export let category;

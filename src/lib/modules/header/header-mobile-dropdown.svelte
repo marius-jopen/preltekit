@@ -3,7 +3,7 @@
 	import { fade } from 'svelte/transition';
 	import Text from '$lib/atoms/text.svelte';
 	import NavigationDropdownAccordeon from '$lib/modules/navigation/navigation-dropdown-accordeon.svelte';
-	import { headerHeight, navigationStatus } from '$lib/functionality/stores';
+	import { headerHeight, navigationStatus } from '$lib/preltekit/stores';
 
 	export let setup;
 	export let open = false; // starts closed

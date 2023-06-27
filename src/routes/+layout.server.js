@@ -1,5 +1,5 @@
 import { parse } from 'svgson';
-import createClient from '$lib/functionality/client';
+import createClient from '$lib/preltekit/client';
 
 export async function load({ fetch, request }) {
 	const icons = import.meta.glob(`$lib/modules/icons/batch-oval/*.svg`, { as: 'raw' });

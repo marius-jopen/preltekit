@@ -2,9 +2,9 @@
 <!-- Deals with empty ones -->
 
 <script>
-	import { linkResolver } from '$lib/functionality/setup';
+	import { linkResolver } from '$lib/preltekit/setup';
 	import { page } from '$app/stores';
-	import { navigationStatus } from '$lib/functionality/stores';
+	import { navigationStatus } from '$lib/preltekit/stores';
 	import * as animateScroll from 'svelte-scrollto';
 
 	export let document;

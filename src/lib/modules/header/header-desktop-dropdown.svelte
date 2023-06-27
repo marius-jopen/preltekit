@@ -1,7 +1,7 @@
 <script>
 	import NavigationDropdown from '$lib/modules/navigation/navigation-dropdown.svelte';
 	import Text from '$lib/atoms/text.svelte';
-	import { headerHeight } from '$lib/functionality/stores';
+	import { headerHeight } from '$lib/preltekit/stores';
 
 	export let setup;
 
