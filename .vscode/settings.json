@@ -1,0 +1,6 @@
+{
+    "comments.visible": true,
+    "interactiveWindow.restore": true,
+    "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
+    "typescript.suggest.enabled": false
+}

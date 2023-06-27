@@ -26,7 +26,6 @@
 
 	function closeNavigation() {
 		if (isNav) {
-			console.log('asffa');
 			navigationStatus.set(false);
 			animateScroll.scrollToTop();
 		}
