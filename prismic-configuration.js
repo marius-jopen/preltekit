@@ -1,3 +1,2 @@
-{
-  "apiEndpoint": "https://preltekit.prismic.io/api/v2"
-}
+// export const namespace = 'your-repo-name'
+export const namespace = 'preltekit'

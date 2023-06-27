@@ -1,6 +1,6 @@
 import * as prismic from '@prismicio/client';
-
-import { namespace, routes } from '$lib/preltekit/setup';
+import { namespace } from "../../../prismic-configuration"
+import { routes } from '$lib/preltekit/setup';
 
 const accessToken = ''; // If your repository is private, add an access token
 

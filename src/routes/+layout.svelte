@@ -1,6 +1,6 @@
 <script>
 	import '../app.postcss';
-	import { namespace } from '$lib/preltekit/setup';
+  import { namespace } from "../../prismic-configuration"
 	import Footer from '$lib/modules/footer/footer.svelte';
 	import HeaderDesktopDropdown from '$lib/modules/header/header-desktop-dropdown.svelte';
 	import HeaderMobileDropdown from '$lib/modules/header/header-mobile-dropdown.svelte';

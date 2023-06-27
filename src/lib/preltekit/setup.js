@@ -1,10 +1,5 @@
-import config from "../../../prismic-configuration.js?raw"
+import { namespace } from "../../../prismic-configuration"
 
-const configObj = JSON.parse(config)
-
-export const namespace = configObj.apiEndpoint.match(/(\w+)(?=\.prismic.io)/i)[0]
-
-console.log(namespace)
 export const apiEndpoint = 'https://' + namespace + '.cdn.prismic.io/api/v2';
 
 export const routes = [
