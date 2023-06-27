@@ -9,10 +9,10 @@
 	$: data;
 </script>
 
-{#key data}
-	<Seo {document} />
+<Seo {document} />
 
-	{#if data}
+{#key data}
+	{#if document}
 		<Text classes="text-center pt-16 pb-16" plain field={data.document.data.title} />
 	{/if}
 {/key}

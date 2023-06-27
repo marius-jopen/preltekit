@@ -10,9 +10,8 @@
 </script>
 
 {#key data}
-	<Seo {document} />
-
-	{#if data}
+  {#if document}
+    <Seo {document} />
 		<Slices slices={document.data.body} />
 	{/if}
 {/key}

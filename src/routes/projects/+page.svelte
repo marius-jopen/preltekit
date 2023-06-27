@@ -10,10 +10,10 @@
 	$: data;
 </script>
 
-{#key data}
-	<Seo {document} />
+<Seo {document} />
 
-	{#if data}
+{#key data}
+  {#if data.document}
 		<Text classes="text-center pt-16 pb-8" plain field={data.document.data.title} />
 		<Text classes="px-4 text-center pb-12" field={data.document.data.description} />
 		<Index type="projects" {data} />
