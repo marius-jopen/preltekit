@@ -1,30 +1,17 @@
+import { error } from "@sveltejs/kit"
 import { makeCases } from '$lib/preltekit/strings';
-import createClient from '$lib/preltekit/client';
 
-export async function load({ url, fetch, request }) {
-	const api = await createClient({ fetch, request });
+export async function load({ url, parent }) {
+  const data = await parent()
+  const document = data.projectsIndex
+
 	const category = url.searchParams.get('category') || false;
 	const cases = category ? makeCases(category) : false;
-
-	// Page specific data
-	const document = await api.getSingle('projects', {
-		graphQuery: `{
-			projects {
-				...projectsFields
-				items {
-					item {
-						...on project {
-							...projectFields
-						}
-					}
-				}
-			}
-		}`
-	});
-
-	// Set the array of items to show
+	
+  // Set the array of items to show
 	let filtered = document.data.items;
 
+  
 	// Extract categories from tags
 	const categories = [...new Set(document.data.items.map(({ item }) => item.tags).flat())].sort();
 
@@ -35,12 +22,12 @@ export async function load({ url, fetch, request }) {
 		];
 	}
 
-	if (document) {
-		return {
-			document,
-			filtered,
-			category,
-			categories
-		};
-	}
+  return {
+    ...data,
+    filtered,
+    category,
+    categories
+  };
+
+  throw new error(404, "Document not found")
 }

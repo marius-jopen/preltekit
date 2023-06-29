@@ -5,7 +5,7 @@
 
 	export let data;
 
-	const { document } = data;
+	const { projectsIndex: document } = data;
 
 	$: data;
 </script>
@@ -13,9 +13,9 @@
 <Seo {document} />
 
 {#key data}
-	{#if data.document}
-		<Text classes="text-center pt-16 pb-8" plain field={data.document.data.title} />
-		<Text classes="px-4 text-center pb-12" field={data.document.data.description} />
-		<Index type="projects" {data} />
+{#if data.projectsIndex}
+		<Text classes="text-center pt-16 pb-8" plain field={data.projectsIndex.data.title} />
+		<Text classes="px-4 text-center pb-12" field={data.projectsIndex.data.description} />
+		<Index type="projects" data={data} />
 	{/if}
 {/key}

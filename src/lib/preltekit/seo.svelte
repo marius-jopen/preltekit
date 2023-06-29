@@ -4,6 +4,7 @@
 
   const setup = $page.data.setup
 
+  
 	export let document;
 	export let divider = '|';
 	export let withTitle = true;

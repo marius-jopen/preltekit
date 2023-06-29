@@ -14,7 +14,6 @@
 		<a
 			data-sveltekit-noscroll
 			href="/{type}"
-			data-sveltekit-prefetch
 			class="{itemClasses} {!category ? activeClass : ''}"
 		>
 			All

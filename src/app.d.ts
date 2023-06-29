@@ -8,6 +8,7 @@ declare global {
 		// interface Locals {}
 		interface PageData {
 			setup: PrismicDocument,
+			projectsIndex: PrismicDocument,
 			projects: PrismicDocument[],
 			home: PrismicDocument,
 			pages: PrismicDocument[]

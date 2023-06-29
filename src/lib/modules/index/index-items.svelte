@@ -2,6 +2,8 @@
 	import ItemProject from '$lib/modules/index/index-item.svelte';
 
 	export let items;
+
+  console.log(items)
 </script>
 
 <div class="w-full px-10 sm:flex flex-wrap justify-center">

@@ -13,7 +13,6 @@
 <Seo {document} />
 
 {#key data}
-
 	{#if document}
 		<Text classes="text-center pt-16 pb-16" plain field={data.document.data.title} />
 		<Image
