@@ -3,6 +3,8 @@
     "interactiveWindow.restore": true,
     "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
     "typescript.suggest.enabled": false,
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": false,
     "svelte.plugin.svelte.compilerWarnings": {
       "a11y-click-events-have-key-events": "ignore",
     }  

@@ -7,11 +7,11 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		interface PageData {
-      setup: PrismicDocument,
-      projects: PrismicDocument[],
-      home: PrismicDocument,
-      pages: PrismicDocument[]
-    }
+			setup: PrismicDocument,
+			projects: PrismicDocument[],
+			home: PrismicDocument,
+			pages: PrismicDocument[]
+		}
 		// interface Platform {}
 	}
 }

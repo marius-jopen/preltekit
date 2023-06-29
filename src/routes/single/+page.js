@@ -9,7 +9,6 @@ export async function load({ fetch, request }) {
 
 		return { document };
 	} catch (e) {
-		// Show user the page not found error
 		throw error(404, e.message);
 	}
 }

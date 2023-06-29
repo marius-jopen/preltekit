@@ -9,12 +9,12 @@ export async function load({ url, fetch, request }) {
 	// Page specific data
 	const document = await api.getSingle('projects', {
 		graphQuery: `{
-      projects {
-        ...projectsFields
+			projects {
+				...projectsFields
 				items {
-          item {
-            ...on project {
-              ...projectFields
+					item {
+						...on project {
+							...projectFields
 						}
 					}
 				}

@@ -1,5 +1,5 @@
 <script>
-  import { page } from "$app/stores"
+	import { page } from "$app/stores"
 	import NavigationDropdown from '$lib/modules/navigation/navigation-dropdown.svelte';
 	import Text from '$lib/atoms/text.svelte';
 	import { headerHeight } from '$lib/preltekit/stores';

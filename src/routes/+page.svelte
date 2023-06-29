@@ -1,9 +1,8 @@
 <script>
-  import { page } from "$app/stores"
+	import { page } from "$app/stores"
 	import Seo from '$lib/preltekit/seo.svelte';
 	import Text from '$lib/atoms/text.svelte';
 	import Slices from '$lib/slices/slices.svelte';
-  
 </script>
 
 <Seo document={$page.data.home} />

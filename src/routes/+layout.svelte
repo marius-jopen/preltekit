@@ -1,13 +1,9 @@
 <script>
 	import '../app.postcss';
-  import { namespace } from "../../prismic-configuration"
+	import { namespace } from "../../prismic-configuration"
 	import Footer from '$lib/modules/footer/footer.svelte';
 	import HeaderDesktopDropdown from '$lib/modules/header/header-desktop-dropdown.svelte';
 	import HeaderMobileDropdown from '$lib/modules/header/header-mobile-dropdown.svelte';
-
-	export let data;
-
-	const { setup } = data;
 </script>
 
 <svelte:head>
