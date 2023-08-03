@@ -27,7 +27,7 @@ export async function load({ fetch, request }) {
 	if (setup && projectsIndex && projects && pages && home) {
 		return {
 			setup,
-      projectsIndex,
+      		projectsIndex,
 			projects,
 			pages,
 			home

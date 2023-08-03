@@ -11,9 +11,7 @@
 	export let href = ""
 
 	export let classes = '';
-	// export let prefetch = ''; // empty string for on
-	// export let reload = 'off'; // off for disabled
-	export let activeClass = 'underline underline-offset-2 decoration-1';
+	export let activeClass = 'underline underline-offset-4 decoration-1';
 	export let isNav = false;
 
 	let active = false;

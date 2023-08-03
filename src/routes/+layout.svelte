@@ -1,9 +1,9 @@
 <script>
 	import '../app.postcss';
 	import { namespace } from "../../prismic-configuration"
-	import Footer from '$lib/modules/footer/footer.svelte';
-	import HeaderDesktopDropdown from '$lib/modules/header/header-desktop-dropdown.svelte';
-	import HeaderMobileDropdown from '$lib/modules/header/header-mobile-dropdown.svelte';
+	import Footer from '$lib/modules/navigations/footer.svelte';
+	import HeaderDesktop from '$lib/modules/navigations/header.svelte';
+	import HeaderMobile from '$lib/modules/navigations/header-mobile.svelte';
 </script>
 
 <svelte:head>
@@ -14,8 +14,8 @@
 	></script>
 </svelte:head>
 
-<HeaderDesktopDropdown />
-<HeaderMobileDropdown />
+<HeaderDesktop />
+<HeaderMobile />
 
 <div class="min-h-screen">
 	<slot />

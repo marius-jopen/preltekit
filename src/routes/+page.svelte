@@ -6,12 +6,14 @@
 
 	export let data;
 
-	const { document } = data;
+	const { document, home } = data;
 
 	$: data;
 </script>
 
 <Seo {document} />
 
-<Text classes="text-center pt-16 pb-16" plain field={document.data.title} />
-<Slices slices={document.data.body} />
+{#key data}
+	<Text classes="h1 font-bold text-center pt-16 pb-16" plain field={document.data.title} />
+	<Slices slices={document.data.body} />
+{/key}

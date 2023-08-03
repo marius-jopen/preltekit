@@ -2,7 +2,7 @@
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import '@splidejs/splide/dist/css/splide.min.css';
 	import { asText, isFilled } from '@prismicio/helpers';
-	import Image from '$lib/atoms/image.svelte';
+	import { PrismicImage } from "@prismicio/svelte"
 
 	export let input;
 	export let sliderRatio = 1;
@@ -63,7 +63,7 @@
 	>
 		{#each input as item}
 			<SplideSlide>
-				<Image src={item.image_slider} />
+				<PrismicImage field={item.image_slider} />
 			</SplideSlide>
 		{/each}
 	</Splide>

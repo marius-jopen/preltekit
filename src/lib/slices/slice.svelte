@@ -1,27 +1,22 @@
 <script>
 	import { dev } from '$app/environment';
 	import Comment from '$lib/preltekit/comment.svelte';
-
-	// Basic
 	import Text from '$lib/slices/basic/text-slice.svelte';
 	import Video from '$lib/slices/basic/video-slice.svelte';
 	import Image from '$lib/slices/basic/image-slice.svelte';
 	import Embed from '$lib/slices/basic/embed-slice.svelte';
 	import Slider from '$lib/slices/basic/slider-slice.svelte';
-
-	// Custom
+	import Index from '$lib/slices/basic/index-slice.svelte';
 
 	export let slice;
 
 	const mappings = {
-		// Basic
 		text: Text,
 		image: Image,
 		video: Video,
 		slider: Slider,
-		embed: Embed
-
-		// Custom
+		embed: Embed,
+		index: Index
 	};
 
 	const missingSlice = (key) => !Object.keys(mappings).includes(key);
